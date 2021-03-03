@@ -6,8 +6,16 @@ const DUMMY_DATA = [
     { id: 'd5', value: 5, region: 'Kyrgyzstan'},
 ]
 
-const xScale = d3.scaleBand().rangeRound([0, 500]).padding(0.1);
-const yScale = d3.scaleLinear().domain([0, 15]).range([300, 0]);
+// scaleBand, scaleLinear don give width and height instead give us function to allow us 
+// translate a value to a number. Allow us to set position and sizes withing the coord
+const xScale = d3.scaleBand()   // oridnal scale every iteam have the same width
+    .domain(DUMMY_DATA.map(dataPoint => dataPoint.region))
+    .rangeRound([0, 500])       // tells from the array how much space is available from 0 to max width
+    .padding(0.1);              // find % padding between iteams
+
+const yScale = d3.scaleLinear() // allow to calculate right height as a value of data
+    .domain([0, 15])            // allow specify min and max value we able to map into chart
+    .range([300, 0]);           // actual available space in px
 
 const container = d3.select('svg')
     .classed('container', true)
@@ -18,5 +26,7 @@ const bars = container
     .enter()
     .append('rect')
     .classed('bar', true)
-    .attr('width', 50) /* the same as style in div, attr for svg elements */
-    .attr('height', data => (data.value * 15))
+    .attr('width', xScale.bandwidth()) // the same as style in div, attr for svg elements
+    .attr('height', data => 300 - yScale(data.value)) // from max height we minus yScale to looks charts how we used to see
+    .attr('x', data => xScale(data.region)) // set width basis on fucntion
+    .attr('y', data => yScale(data.value))
