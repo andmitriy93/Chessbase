@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/andmitriy93/JS-project#readme",
   "dependencies": {
-    "d3": "^6.5.0"
+    "d3": "^6.5.0",
+    "d3-dsv": "^2.0.0"
   }
 }
