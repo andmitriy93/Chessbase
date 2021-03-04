@@ -1,4 +1,3 @@
-
 let openings = d3.csvParse(
   `Rank,Opening,Win%,Draw%,Points per 100 games
 1,Queen's Gambit,40,36,58
@@ -42,7 +41,7 @@ let Tip = tip
               return `<strong>${d.rank} Rank</strong><br>${d.win}% Win<br>${d.draw}% Draw`
             })
 
-            
+
 chart.call(Tip)
 
 let x = d3.scaleBand().domain(openings.map(d => d.opening)).range([0, width]).padding(0.1)

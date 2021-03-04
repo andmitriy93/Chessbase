@@ -12,12 +12,25 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bumbeishvili/d3-tip-for-v6@4/d3-tip.min.css">
+    <link rel="stylesheet" href="./styles.css">
     <script>
       const tip = d3.tip()
     </script>
     <script src="index.js" defer></script>
   </head>
   <body>
-    <svg></svg>
+    <header>Header</header>
+    <div class="global-window">
+      <!-- <div class="header">Header</div> -->
+      <div class="side-bar">
+        <h1>Side bar</h1>
+      </div>
+      <div class="visualization-window">
+        <svg class="svg-open"></svg>
+      </div>
+      <div class="right-side-bar">
+        <h1>Right Side Bar</h1>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,31 @@
+
+.global-window {
+  height: 100vh;
+  display: flex;
+}
+/* 
+.global-window div {
+  border: 1px solid black;
+} */
+
+header {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.visualization-window {
+  width: 100%;
+  border: 1px solid red;
+}
+
+.side-bar {
+  width: 20%;
+  border: 1px solid blue;
+}
+
+.right-side-bar {
+  width: 10%;
+}
