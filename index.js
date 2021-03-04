@@ -35,6 +35,16 @@ let chart = d3.select('svg')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
 
 
+let Tip = tip
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(event,d) {
+              return `<strong>${d.rank} Rank</strong><br>${d.win}% Win<br>${d.draw}% Draw`
+            })
+
+            
+chart.call(Tip)
+
 let x = d3.scaleBand().domain(openings.map(d => d.opening)).range([0, width]).padding(0.1)
 let y = d3.scaleLinear().domain([0, 100]).range([height, 0])
 
@@ -58,6 +68,10 @@ bar.append('rect')
     .attr('y', (data) => y(data.points))
     .attr('height',(data) => height - y(data.points))
     .attr('width', x.bandwidth())
+    .on('mouseover', Tip.show)
+    .on('mouseout', Tip.hide)
+
+
 
 
 
