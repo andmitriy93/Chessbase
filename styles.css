@@ -29,3 +29,8 @@ header {
 .right-side-bar {
   width: 10%;
 }
+
+rect {
+  /* fill: url(#gradient); */
+  width: 70px;
+}

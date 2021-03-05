@@ -16,7 +16,7 @@
     <script>
       const tip = d3.tip()
     </script>
-    <script src="index.js" defer></script>
+    <!-- <script src="index.js" defer></script> -->
   </head>
   <body>
     <header>Header</header>
@@ -26,11 +26,25 @@
         <h1>Side bar</h1>
       </div>
       <div class="visualization-window">
-        <svg class="svg-open"></svg>
+        <svg class="white-open">
+          <!-- <defs>
+            <linearGradient id = "gradient">
+              <stop offset = "0%" stop-color= " #3f5efb" />
+              <stop offset= "100%" stop-color= "#fc466b" /> 
+       
+            </linearGradient>
+               <linearGradient id = "gradientForText">
+              <stop offset = "10%" stop-color= " #020024" />
+              <stop offset= "90%" stop-color= "#3c13ae" />  
+            </linearGradient>
+            </defs> -->
+        </svg>
+        <svg class="black-open"></svg>
       </div>
       <div class="right-side-bar">
         <h1>Right Side Bar</h1>
       </div>
+      <script src="./src/index.js"></script>
     </div>
   </body>
 </html>
