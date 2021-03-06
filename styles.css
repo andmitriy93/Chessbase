@@ -3,10 +3,6 @@
   height: 100vh;
   display: flex;
 }
-/* 
-.global-window div {
-  border: 1px solid black;
-} */
 
 header {
   width: 100%;
@@ -15,10 +11,16 @@ header {
   font-size: 30px;
 }
 
+svg {
+  /* position: absolute; */
+  border: 1px solid black;
+  object-fit: cover;    /* cover for resizing */
+  top: 30%;
+}
 
-.visualization-window {
-  width: 100%;
-  border: 1px solid red;
+rect {
+  /* fill: url(#gradient); */
+  width: 70px;
 }
 
 .side-bar {
@@ -30,7 +32,93 @@ header {
   width: 10%;
 }
 
-rect {
-  /* fill: url(#gradient); */
-  width: 70px;
+.carousel-window {
+  width: 70%;
+  border: 1px solid red;
+  position: relative;
 }
+
+.carousel-container {
+  background: lightgreen;
+  height: 90%;
+  overflow: hidden;
+  /* position: relative; */
+ 
+}
+
+.carousel_track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+
+.carousel_slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+.carousel-button-left {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.left-arrow {
+  font-size: large;
+}
+
+.carousel-button-right {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.right-arrow {
+  font-size: large;
+}
+
+.carousel_nav{
+  /* background: pink; */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.carousel_indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0,0,0,.3);
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.carousel_indicator.current-slide {
+  background: rgba(0,0,0,.75);
+}
+
+
+.bar {
+  /* width: 50px; */
+}
+
+.is-hidden {
+  display: none;
+}
+
