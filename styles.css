@@ -67,15 +67,29 @@ rect {
 .carousel-button-left {
   position: absolute;
   top: 50%;
-  left: -40px;
+  left: -30px;
   transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.left-arrow {
+  font-size: large;
 }
 
 .carousel-button-right {
   position: absolute;
   top: 50%;
-  right: -40px;
+  right: -30px;
   transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.right-arrow {
+  font-size: large;
 }
 
 .carousel_nav{
