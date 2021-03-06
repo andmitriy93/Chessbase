@@ -36,6 +36,23 @@ nextButton.addEventListener("click", (e) => {
 });
 
 // when click nav indicator, move to that slide
+dotsNav.addEventListener('click', e => {
+  // what indicator was clicked on?
+  // click only for buttons not for the whole div
+  const targetDot = e.target.closest('button');
+
+  if (!targetDot) return;
+
+  const currentSlide = track.querySelector('.current-slide');
+  const currentDot = dotsNav.querySelector('.current-slide');
+  const targetIndex = dots.findIndex(dot => dot === targetDot);
+  const targetSlide = slides[targetIndex];
+
+  moveToSlide(track, currentSlide, targetSlide);
+  // console.log(targetIndex)
+})
+
+
 
 // // Openings for White best 10
 // let openings = d3.csvParse(
