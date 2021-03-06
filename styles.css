@@ -12,9 +12,8 @@ header {
 }
 
 svg {
-  position: absolute;
+  /* position: absolute; */
   border: 1px solid black;
-  /* width: 500px; */
   object-fit: cover;    /* cover for resizing */
   top: 30%;
 }
@@ -42,7 +41,8 @@ rect {
 .carousel-container {
   background: lightgreen;
   height: 90%;
-  position: relative;
+  overflow: hidden;
+  /* position: relative; */
  
 }
 
@@ -50,11 +50,13 @@ rect {
   padding: 0;
   margin: 0;
   list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
 }
 
-.carousel-slide {
+.carousel_slide {
   position: absolute;
-  object-fit: cover;
   top: 0;
   bottom: 0;
   height: 100%;
