@@ -20,6 +20,12 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 };
 
 // when click left, move slides to the left
+prevButton.addEventListener("click", (e) => {
+  const currentSlide = track.querySelector(".current-slide");
+  const prevSlide = currentSlide.previousElementSibling;
+
+  moveToSlide(track, currentSlide, prevSlide);
+});
 
 // when click right, move slides to the right
 nextButton.addEventListener("click", (e) => {
