@@ -1,6 +1,6 @@
 
 .global-window {
-  height: 100vh;
+  min-height: 65vh;
   display: flex;
 }
 
@@ -9,11 +9,14 @@ header {
   height: 20%;
   text-align: center;
   font-size: 30px;
+  /* height: 5vh; */
 }
 
 svg {
-  /* position: absolute; */
-  border: 1px solid black;
+  position: absolute;
+  left: 10%;
+  /* display: flex; */
+  border: 3px solid black;
   object-fit: cover;    /* cover for resizing */
   top: 30%;
 }
@@ -36,14 +39,15 @@ rect {
   width: 70%;
   border: 1px solid red;
   position: relative;
+  height: 900px;
 }
 
 .carousel-container {
   background: lightgreen;
   height: 90%;
   overflow: hidden;
-  /* position: relative; */
- 
+  position: relative;
+  top: 50px;
 }
 
 .carousel_track {
@@ -93,10 +97,11 @@ rect {
 }
 
 .carousel_nav{
-  /* background: pink; */
+  background: pink;
   display: flex;
   justify-content: center;
   padding: 10px 0;
+  margin-top: 50px;
 }
 
 .carousel_indicator {
