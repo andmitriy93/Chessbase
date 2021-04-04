@@ -26,7 +26,7 @@ let white_worst = d3.csvParse(
 let margin2 = { top: 20, right: 20, bottom: 30, left: 30 };
 
 let height2 = 500 - margin2.top - margin2.bottom
-let width2 = 950 - margin2.left - margin2.right
+let width2 = 1000 - margin2.left - margin2.right
 
 // Create svg with class name Chart
 let chart2 = d3.select('.white-worst')

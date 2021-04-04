@@ -27,7 +27,7 @@ let defenses = d3.csvParse(
 let margin = { top: 20, right: 20, bottom: 30, left: 30 };
 
 let height = 500 - margin.top - margin.bottom
-let width = 950 - margin.left - margin.right
+let width = 1000 - margin.left - margin.right
 
 // Create svg with class name Chart
 let chart = d3.select('.black-open')
