@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ChessBase</title>
     <script src="https://d3js.org/d3.v6.js" defer></script>
     <!--  defer - means execute in order  -->
     <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
@@ -23,7 +23,9 @@
     <header>Header</header>
     <div class="global-window">
       <div class="side-bar">
-        <h1>Side bar</h1>
+        <img  class='side-bar-img' src="./photo_2021-04-05 23.01.05.jpeg" alt="">
+        <!-- <h1>Side bar</h1> -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium animi iure vel officiis amet dolor soluta hic ipsam aperiam beatae nisi facilis iste repellendus dolore, dolores autem fuga perferendis!</p>
       </div>
       <div class="carousel-window">
         <button class="carousel-button-left is-hidden"><i class="fas fa-chevron-left left-arrow"></i></button>
@@ -34,11 +36,20 @@
               <svg class="white-open">
               </svg>
             </li>
+            <!-- <li class="carousel_slide current-slide">
+              <svg class="donut"></svg>
+            </li> -->
             <li class="carousel_slide">
               <svg class="black-open"></svg>
             </li>
             <li class="carousel_slide">
               <svg class="white-worst"></svg>
+            </li>
+            <li class="carousel_slide">
+              <svg class="donut"></svg>
+            </li>
+            <li class="carousel_slide">
+              <svg class="donut-black"></svg>
             </li>
           </ul>
         </div>
@@ -63,5 +74,6 @@
     <script src="./src/black_openings.js"></script>
     <script src="./src/white_worst.js"></script>
     <script src="./src/Carlsen_Magnus_res.js"></script>
+    <script src="./src/Carlsen_Magnus_res_black.js"></script>
   </body>
 </html>

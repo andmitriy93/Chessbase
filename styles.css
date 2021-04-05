@@ -19,9 +19,8 @@ header {
 svg {
   position: absolute;
   left: 7%;
-  /* display: flex; */
   border: 3px solid black;
-  object-fit: cover;    /* cover for resizing */
+  object-fit: cover;
   top: 25%;
   width: auto;
 }
@@ -51,7 +50,7 @@ rect {
 }
 
 .carousel-container {
-  background: lightgreen;
+  /* background: lightgreen; */
   height: 90vh;
   overflow: hidden;
   position: relative;
@@ -129,12 +128,24 @@ rect {
   background: rgba(0,0,0,.75);
 }
 
-
-.bar {
-  /* width: 50px; */
-}
-
 .is-hidden {
   display: none;
 }
 
+
+.donut {
+  width: 1000px;
+  height: 500px;
+  left: 10px
+}
+
+.donut-black {
+  width: 1000px;
+  height: 500px;
+  left: 10px;
+}
+
+.side-bar-img {
+  width: 220px;
+  object-fit: cover;
+}

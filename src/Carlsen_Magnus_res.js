@@ -1,48 +1,83 @@
-var dataset = [
-  { name: "Win", games: 384 },
-  { name: "Lose", games: 78 },
-  { name: "Draw", games: 303 },
+let dataset = [
+  { name: "Win", value: 384 },
+  { name: "Lose", value: 78 },
+  { name: "Draw", value: 303 },
 ];
 
-var pie = d3.layout
+// let width = 500;
+// let height = 500;
+let radius = Math.min(width, height) / 2;
+let donutWidth = 75;
+let color = d3
+  .scaleOrdinal()
+  .range(["#88cefa", "#fa8073", "#d3d3d3", "#08B2B2"]);
+
+let svg = d3
+  .select(".donut")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .append("g")
+  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+let arc = d3
+  .arc()
+  .innerRadius(radius - donutWidth)
+  .outerRadius(radius);
+
+let pie = d3
   .pie()
   .value(function (d) {
-    return d.games;
+    return d.value;
   })
-  .sort(null)
-  .padAngle(0.03);
+  .sort(null);
 
-var w = 300,
-  h = 300;
-
-var outerRadius = w / 2;
-var innerRadius = 100;
-
-var color = d3.scale.category10();
-
-var arc = d3.svg.arc().outerRadius(outerRadius).innerRadius(innerRadius);
-
-var svg = d3
-  .select(".chart")
-  .append("svg")
-  .attr({
-    width: w,
-    height: h,
-    class: "shadow",
-  })
-  .append("g")
-  .attr({
-    transform: "translate(" + w / 2 + "," + h / 2 + ")",
-  });
-
-var path = svg
+let path = svg
   .selectAll("path")
   .data(pie(dataset))
   .enter()
   .append("path")
-  .attr({
-    d: arc,
-    fill: function (d, i) {
-      return color(d.data.name);
-    },
+  .attr("d", arc)
+  .attr("fill", function (d, i) {
+    return color(d.data.name + ": " + d.data.value);
+  })
+  .attr("transform", "translate(0, 0)");
+
+let legendRectSize = 13;
+let legendSpacing = 7;
+let legend = svg
+  .selectAll(".legend") //the legend and placement
+  .data(color.domain())
+  .enter()
+  .append("g")
+  .attr("class", "circle-legend")
+  .attr("transform", function (d, i) {
+    let height = legendRectSize + legendSpacing;
+    let offset = (height * color.domain().length) / 2;
+    let horz = -2 * legendRectSize - 13;
+    let vert = i * height - offset;
+    return "translate(" + horz + "," + vert + ")";
   });
+legend
+  .append("circle") //keys
+  .style("fill", color)
+  .style("stroke", color)
+  .attr("cx", 0)
+  .attr("cy", 0)
+  .attr("r", ".5rem");
+legend
+  .append("text") //labels
+  .attr("x", legendRectSize + legendSpacing)
+  .attr("y", legendRectSize - legendSpacing)
+  .text(function (d) {
+    return d;
+  });
+
+svg
+  .append("text")
+  .attr("y", 210)
+  .attr("x", -118)
+  .attr("text-anchor", "end")
+  .attr("font-size", 30)
+  .attr('fill', 'rgb(253, 245, 172)')
+  .text("Carlsen Magnus white pieces");
