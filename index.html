@@ -23,8 +23,27 @@
     <header>Header</header>
     <div class="global-window">
       <div class="side-bar">
-        <img  class='side-bar-img' src="./photo_2021-04-05 23.01.05.jpeg" alt="">
-        <!-- <h1>Side bar</h1> -->
+        <!-- <img  class='side-bar-img' src="./photo_2021-04-05 23.01.05.jpeg" alt=""> -->
+        <div class="container">
+          <div class="box">
+            <span style="--i:1"><i>Chess</i><i>Base</i></span>
+            <span style="--i:2"><i>Chess</i><i>Base</i></span>
+            <span style="--i:3"><i>Chess</i><i>Base</i></span>
+            <span style="--i:4"><i>Chess</i><i>Base</i></span>
+            <span style="--i:5"><i>Chess</i><i>Base</i></span>
+            <span style="--i:6"><i>Chess</i><i>Base</i></span>
+            <span style="--i:7"><i>Chess</i><i>Base</i></span>
+            <span style="--i:8"><i>Chess</i><i>Base</i></span>
+            <span style="--i:9"><i>Chess</i><i>Base</i></span>
+            <span style="--i:10"><i>Chess</i><i>Base</i></span>
+            <span style="--i:11"><i>Chess</i><i>Base</i></span>
+            <span style="--i:12"><i>Chess</i><i>Base</i></span>
+            <span style="--i:13"><i>Chess</i><i>Base</i></span>
+            <span style="--i:14"><i>Chess</i><i>Base</i></span>
+            <span style="--i:15"><i>Chess</i><i>Base</i></span>
+            <span style="--i:16"><i>Chess</i><i>Base</i></span>
+          </div>
+        </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium animi iure vel officiis amet dolor soluta hic ipsam aperiam beatae nisi facilis iste repellendus dolore, dolores autem fuga perferendis!</p>
       </div>
       <div class="carousel-window">
@@ -33,23 +52,37 @@
         <div class="carousel-container">
           <ul class="carousel_track">
             <li class="carousel_slide current-slide">
-              <svg class="white-open">
-              </svg>
-            </li>
-            <!-- <li class="carousel_slide current-slide">
-              <svg class="donut"></svg>
-            </li> -->
-            <li class="carousel_slide">
-              <svg class="black-open"></svg>
+              <div class="slide-wrap">
+                <svg class="white-open"></svg>
+              </div>
             </li>
             <li class="carousel_slide">
-              <svg class="white-worst"></svg>
+              <div class="slide-wrap">
+                <svg class="black-open"></svg>
+              </div>
             </li>
             <li class="carousel_slide">
-              <svg class="donut"></svg>
+              <div class=slide-wrap>
+                <svg class="white-worst"></svg>
+
+              </div>
             </li>
             <li class="carousel_slide">
-              <svg class="donut-black"></svg>
+              <div class="slide-wrap">
+                <svg class="donut"></svg>
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum explicabo nisi expedita doloribus! Modi ratione nisi blanditiis recusandae possimus fugit alias quis impedit! Amet, corrupti ea! Error provident vitae quae?</span>
+              </div>
+            </li>
+            <li class="carousel_slide">
+              <div class="slide-wrap">
+                <svg class="donut-black"></svg>
+                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim dignissimos quam porro, sit voluptas ex sint vitae adipisci explicabo temporibus laboriosam iste animi quo illum dolores ullam perspiciatis! Beatae, voluptatem.</span>
+              </div>
+            </li>
+            <li class="carousel_slide">
+              <div class="slide-wrap">
+                <svg class="line-chart"></svg>
+              </div>
             </li>
           </ul>
         </div>
@@ -75,5 +108,6 @@
     <script src="./src/white_worst.js"></script>
     <script src="./src/Carlsen_Magnus_res.js"></script>
     <script src="./src/Carlsen_Magnus_res_black.js"></script>
+    <script src="./src/Magnus_statistic.js"></script>
   </body>
 </html>

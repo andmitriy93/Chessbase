@@ -79,5 +79,5 @@ svg
   .attr("x", -118)
   .attr("text-anchor", "end")
   .attr("font-size", 30)
-  .attr('fill', 'rgb(253, 245, 172)')
+  .attr('fill', 'rgb(101, 186, 170)')
   .text("Carlsen Magnus white pieces");

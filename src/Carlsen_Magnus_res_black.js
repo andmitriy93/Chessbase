@@ -39,12 +39,9 @@ let path1 = svg1
   .append("path")
   .attr("d", arc1)
   .attr("fill", function (d, i) {
-    return color1(d.data.name + ': ' + d.data.value);
+    return color1(d.data.name + ": " + d.data.value);
   })
   .attr("transform", "translate(0, 0)");
-
-
-
 
 let legendRectSize1 = 13;
 let legendSpacing1 = 7;
@@ -76,14 +73,11 @@ legend1
     return d;
   });
 
-
-
-
-
-// svg1.append('text')
-//   .attr('y', 210)
-//   .attr('x', -118)
-//   .attr('text-anchor', 'end')
-//   .attr('font-size', 30)
-//   .attr('fill', 'rgb(101, 186, 170)')
-//   .text('Carlsen Magnus black pieces')
+svg1
+  .append("text")
+  .attr("y", 210)
+  .attr("x", -118)
+  .attr("text-anchor", "end")
+  .attr("font-size", 30)
+  .attr("fill", "rgb(101, 186, 170)")
+  .text("Carlsen Magnus black pieces");
