@@ -80,3 +80,4 @@ bar1.append('rect')
     .attr('width', x1.bandwidth())
     .on('mouseover', Tip1.show)
     .on('mouseout', Tip1.hide)
+

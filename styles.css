@@ -19,7 +19,7 @@ header {
 svg {
   /* position: absolute; */
   /* left: 7%; */
-  /* border: 3px solid black; */
+  border: 3px solid black;
   object-fit: cover;
   /* top: 25%; */
 }
@@ -155,6 +155,7 @@ rect {
   left: 7%;
 }
 
+
 .black-open {
   /* left: 15px; */
   position: relative;
@@ -197,4 +198,9 @@ rect {
   border: 2px solid brown;
   height: 80%;
   padding-top: 10%;
+}
+
+
+.magnus-stats {
+  height: 90%;
 }
