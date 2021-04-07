@@ -140,16 +140,14 @@ rect {
 
 
 
-
+/* 
 .white-open{
-  /* left: 15px; */
   justify-content: center;
   position: relative;
   left: 7%;
 }
 
 .white-worst {
-  /* left: 15px; */
   justify-content: center;
   position: relative;
   left: 7%;
@@ -157,32 +155,26 @@ rect {
 
 
 .black-open {
-  /* left: 15px; */
   position: relative;
   justify-content: center;
   left: 7%;
 }
 
 .donut {
-  /* width: 1000px; */
   width: 80%;
   height: 450px;
-  /* left: 10px */
   justify-content: center;
   position: relative;
   left: 7%;
 }
 
 .donut-black {
-  /* width: 1000px; */
   height: 450px;
-  /* height: 100%;   */
   width: 80%;
-  /* left: 10px; */
   justify-content: center;
   position: relative;
   left: 7%;
-}
+} */
 
 .carousel_slide span {
   margin-left: 7%;
@@ -194,13 +186,68 @@ rect {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 10%;
+  /* top: 10%; */
   border: 2px solid brown;
-  height: 80%;
-  padding-top: 10%;
+  height: 100%;
+  /* padding-top: 10%; */
 }
 
+.slide-wrap img {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
 
-.magnus-stats {
+.slide-wrap svg {
+  justify-content: center;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 50px;
+  left: 7%;
+  height: 66%;
+  width: 80%;
+}
+
+.person-wrap {
+  display: flex;
+  border: 1px solid black;
+  width: 80%;
+  padding-left: 20px;
+}
+
+.person-wrap span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* 
+.harry-stats {
+  justify-content: center;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 50px;
+  left: 7%;
+  height: 66%;
+  width: 80%;
+}
+
+.fisher-stats {
+  justify-content: center;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 50px;
+  left: 7%;
   height: 90%;
+  width: 80%;
 }
+
+.capablanca {
+  justify-content: center;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 50px;
+  left: 7%;
+  height: 90%;
+  width: 80%;
+} */
