@@ -1,8 +1,10 @@
 let bobbyFisher = d3.csvParse(
   `Title,Results%,Percents
-  Win,680,57
-  Draw,346,29
-  Lose,167,14
+  Total Win,680,57
+  Total Draw,346,29
+  Total Lose,167,14
+  White,440,61
+  Black,236,50
   `,
   function (d) {
     return {
@@ -66,7 +68,7 @@ let barBobby = bobby.selectAll('.bar')
 
 barBobby.append('rect')
     .attr('class', 'bar')
-    .attr('x', (data) =>  50 + x6(data.title))
+    .attr('x', (data) =>  25 + x6(data.title))
     .attr('y', (data) => y6(data.value))
     .attr('height',(data) => height5 - y6(data.value))
     .attr('width', x6.bandwidth())

@@ -193,10 +193,11 @@ rect {
 }
 
 .slide-wrap img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   float: left;
   margin-right: 10px;
+  object-fit: cover;
 }
 
 .slide-wrap svg {
@@ -212,16 +213,16 @@ rect {
 .person-wrap {
   display: flex;
   border: 1px solid black;
-  width: 80%;
+  width: 90%;
   padding-left: 20px;
 }
 
 .person-wrap span {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
-/* 
+
 .harry-stats {
   justify-content: center;
   position: relative;
@@ -250,4 +251,4 @@ rect {
   left: 7%;
   height: 90%;
   width: 80%;
-} */
+} 

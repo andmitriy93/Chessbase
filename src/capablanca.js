@@ -1,8 +1,10 @@
 let capablancaData = d3.csvParse(
   `Title,Results%,Percents
-  Win,682,52
-  Draw,434,33
-  Lose,197,15
+  Total Win,682,52
+  Total Draw,434,33
+  Total Lose,197,15
+  White,476,55
+  Black,204,46
   `,
   function (d) {
     return {
@@ -57,7 +59,7 @@ capablanca.append("text")
     .attr('x', 500)
     .attr("text-anchor", "middle")
     .attr('font-size', 20)
-    .text("Bobby Fisher Stats");
+    .text("Jose Raul Capablanca Stats");
 
 let barCapa = capablanca.selectAll('.bar')
     .data(capablancaData)
@@ -66,7 +68,7 @@ let barCapa = capablanca.selectAll('.bar')
 
 barCapa.append('rect')
     .attr('class', 'bar')
-    .attr('x', (data) =>  50 + xCapa(data.title))
+    .attr('x', (data) =>  25 + xCapa(data.title))
     .attr('y', (data) => yCapa(data.value))
     .attr('height',(data) => heightCapa - yCapa(data.value))
     .attr('width', xCapa.bandwidth())

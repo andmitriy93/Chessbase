@@ -91,15 +91,17 @@
 
 let harryKasparov = d3.csvParse(
   `Title,Results%,Percents
-  Win,1197,50
-  Draw,1005,42
-  Lose,192,8
+  Total Win,1197,50
+  Total Draw,1005,42
+  Total Lose,192,8
+  White,780,59
+  Black,407,38
   `,
   function (d) {
     return {
       title: d.Title,
       value: +d['Results%'],
-      percents: +d.Percents
+      percents: +d.Percents,
     }
   }
 )
@@ -157,7 +159,7 @@ let barHarry = harry.selectAll('.bar')
 
 barHarry.append('rect')
     .attr('class', 'bar')
-    .attr('x', (data) =>  50 + x5(data.title))
+    .attr('x', (data) =>  25 + x5(data.title))
     .attr('y', (data) => y5(data.value))
     .attr('height',(data) => height - y5(data.value))
     .attr('width', x5.bandwidth())
