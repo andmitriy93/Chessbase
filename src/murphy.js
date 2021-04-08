@@ -3,8 +3,12 @@ let murphyData = d3.csvParse(
   Total Win,290,77
   Total Draw,45,12
   Total Lose,41,11
-  White,197,81
-  Black,92,69
+  White Win,197,81
+  White Draw,24,10
+  White Lose,22,9
+  Black Win,92,69
+  Black Draw,21,16
+  Black Lose,20,15
   `,
   function (d) {
     return {
@@ -39,7 +43,7 @@ let murphyTip = tip
 murphy.call(murphyTip)
 
 
-let xMurphy = d3.scaleBand().domain(murphyData.map(d => d.title)).rangeRound([1, 620]).padding(0.1)
+let xMurphy = d3.scaleBand().domain(murphyData.map(d => d.title)).rangeRound([1, 800]).padding(0.1)
 let yMurphy = d3.scaleLinear().domain([0, 377]).range([heightMurphy, 0])
 
 // add axis
@@ -68,7 +72,7 @@ let barMurphy = murphy.selectAll('.bar')
 
 barMurphy.append('rect')
     .attr('class', 'bar')
-    .attr('x', (data) =>  25 + xMurphy(data.title))
+    .attr('x', (data) =>  15 + xMurphy(data.title))
     .attr('y', (data) => yMurphy(data.value))
     .attr('height',(data) => heightMurphy - yMurphy(data.value))
     .attr('width', xMurphy.bandwidth())

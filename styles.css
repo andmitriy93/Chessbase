@@ -23,7 +23,7 @@ svg {
   /* left: 7%; */
   border: 3px solid black;
   object-fit: cover;
-  /* top: 25%; */
+  /* top: 10px; */
 }
 
 rect {
@@ -52,7 +52,7 @@ rect {
   border: 1px solid red;
   position: relative;
   /* height: 900px; */
-  height: 90vh;
+  height: 95vh;
   padding-left: 5px;
 }
 
@@ -117,7 +117,7 @@ rect {
   display: flex;
   justify-content: center;
   padding: 10px 0;
-  /* margin-top: 50px; */
+  /* margin-top: 20px; */
 }
 
 .carousel_indicator {
@@ -254,3 +254,14 @@ rect {
   height: 90%;
   width: 80%;
 } 
+
+.murphy{
+  justify-content: center;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 50px;
+  left: 7%;
+  height: 90%;
+  width: 80%;
+} 
+

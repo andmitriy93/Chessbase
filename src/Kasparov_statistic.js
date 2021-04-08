@@ -94,8 +94,12 @@ let harryKasparov = d3.csvParse(
   Total Win,1197,50
   Total Draw,1005,42
   Total Lose,192,8
-  White,780,59
-  Black,407,38
+  White Win,780,59
+  White Draw,463,35
+  White Lose,79,6
+  Black Win,407,38
+  Black Draw,535,50
+  Black Lose,129,12
   `,
   function (d) {
     return {
@@ -130,7 +134,7 @@ let harryTip = tip
 harry.call(harryTip)
 
 
-let x5 = d3.scaleBand().domain(harryKasparov.map(d => d.title)).rangeRound([1, 620]).padding(0.1)
+let x5 = d3.scaleBand().domain(harryKasparov.map(d => d.title)).rangeRound([1, 800]).padding(0.1)
 let y5 = d3.scaleLinear().domain([0, 2394]).range([height4, 0])
 
 // add axis
@@ -159,7 +163,7 @@ let barHarry = harry.selectAll('.bar')
 
 barHarry.append('rect')
     .attr('class', 'bar')
-    .attr('x', (data) =>  25 + x5(data.title))
+    .attr('x', (data) =>  15 + x5(data.title))
     .attr('y', (data) => y5(data.value))
     .attr('height',(data) => height - y5(data.value))
     .attr('width', x5.bandwidth())

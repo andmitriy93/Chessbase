@@ -3,8 +3,12 @@ let bobbyFisher = d3.csvParse(
   Total Win,680,57
   Total Draw,346,29
   Total Lose,167,14
-  White,440,61
-  Black,236,50
+  White Win,440,61
+  White Draw,173,24
+  White Lose,108,15
+  Black Win,236,50
+  Black Draw,173,37
+  Black Lose,61,13
   `,
   function (d) {
     return {
@@ -39,7 +43,7 @@ let bobbyTip = tip
 bobby.call(bobbyTip)
 
 
-let x6 = d3.scaleBand().domain(bobbyFisher.map(d => d.title)).rangeRound([1, 620]).padding(0.1)
+let x6 = d3.scaleBand().domain(bobbyFisher.map(d => d.title)).rangeRound([1, 800]).padding(0.1)
 let y6 = d3.scaleLinear().domain([0, 1193]).range([height5, 0])
 
 // add axis
@@ -68,7 +72,7 @@ let barBobby = bobby.selectAll('.bar')
 
 barBobby.append('rect')
     .attr('class', 'bar')
-    .attr('x', (data) =>  25 + x6(data.title))
+    .attr('x', (data) =>  15 + x6(data.title))
     .attr('y', (data) => y6(data.value))
     .attr('height',(data) => height5 - y6(data.value))
     .attr('width', x6.bandwidth())

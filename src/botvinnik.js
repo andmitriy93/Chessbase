@@ -3,8 +3,12 @@ let botvinnikData = d3.csvParse(
   Total Win,646,49
   Total Draw,514,39
   Total Lose,158,12
-  White,361,53
-  Black,280,44
+  White Win,361,53
+  White Draw,259,38
+  White Lose,61,9
+  Black Win,280,44
+  Black Draw,261,41
+  Black Lose,95,15
   `,
   function (d) {
     return {
@@ -39,7 +43,7 @@ let botTip = tip
 botvinnik.call(botTip)
 
 
-let xBot = d3.scaleBand().domain(botvinnikData.map(d => d.title)).rangeRound([1, 620]).padding(0.1)
+let xBot = d3.scaleBand().domain(botvinnikData.map(d => d.title)).rangeRound([1, 800]).padding(0.1)
 let yBot = d3.scaleLinear().domain([0, 1318]).range([heightBot, 0])
 
 // add axis
@@ -68,7 +72,7 @@ let barBot = botvinnik.selectAll('.bar')
 
 barBot.append('rect')
     .attr('class', 'bar')
-    .attr('x', (data) =>  25 + xBot(data.title))
+    .attr('x', (data) =>  15 + xBot(data.title))
     .attr('y', (data) => yBot(data.value))
     .attr('height',(data) => heightBot - yBot(data.value))
     .attr('width', xBot.bandwidth())

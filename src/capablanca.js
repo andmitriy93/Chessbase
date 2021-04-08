@@ -3,8 +3,12 @@ let capablancaData = d3.csvParse(
   Total Win,682,52
   Total Draw,434,33
   Total Lose,197,15
-  White,476,55
-  Black,204,46
+  White Win,476,55
+  White Draw,242,28
+  White Lose,147,17
+  Black Win,204,46
+  Black Draw,186,42
+  Black Lose,53,12
   `,
   function (d) {
     return {
@@ -39,7 +43,7 @@ let capaTip = tip
 capablanca.call(capaTip)
 
 
-let xCapa = d3.scaleBand().domain(capablancaData.map(d => d.title)).rangeRound([1, 620]).padding(0.1)
+let xCapa = d3.scaleBand().domain(capablancaData.map(d => d.title)).rangeRound([1, 800]).padding(0.1)
 let yCapa = d3.scaleLinear().domain([0, 1311]).range([heightCapa, 0])
 
 // add axis
@@ -68,7 +72,7 @@ let barCapa = capablanca.selectAll('.bar')
 
 barCapa.append('rect')
     .attr('class', 'bar')
-    .attr('x', (data) =>  25 + xCapa(data.title))
+    .attr('x', (data) =>  15 + xCapa(data.title))
     .attr('y', (data) => yCapa(data.value))
     .attr('height',(data) => heightCapa - yCapa(data.value))
     .attr('width', xCapa.bandwidth())
