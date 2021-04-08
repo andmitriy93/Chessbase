@@ -25,7 +25,7 @@ body {
 
 .container .box {
   transform-style: preserve-3d;
-  animation: animate 25s linear infinite;
+  animation: animate 22s linear infinite;
 }
 
 @keyframes animate {

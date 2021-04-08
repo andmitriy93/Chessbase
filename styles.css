@@ -3,6 +3,7 @@
   /* min-height: 65vh; */
   height: 100vh;
   display: flex;
+  cursor: default;
 }
 
 body {
