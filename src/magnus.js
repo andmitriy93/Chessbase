@@ -63,7 +63,9 @@ magnus.append("text")
     .attr('x', 500)
     .attr("text-anchor", "middle")
     .attr('font-size', 20)
-    .text("Bobby Fisher Stats");
+    // .attr('fill', '#d3d3d3')
+    .attr("fill", "rgb(101, 186, 170)")
+    .text("Magnus Carlsen Stats");
 
 let barMagnus = magnus.selectAll('.bar')
     .data(magnusData)

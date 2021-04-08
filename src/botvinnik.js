@@ -63,6 +63,7 @@ botvinnik.append("text")
     .attr('x', 500)
     .attr("text-anchor", "middle")
     .attr('font-size', 20)
+    .attr("fill", "rgb(101, 186, 170)")
     .text("Mikhail Botvinnik Stats");
 
 let barBot = botvinnik.selectAll('.bar')

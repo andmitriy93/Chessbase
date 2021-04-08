@@ -69,6 +69,7 @@ legend
   .append("text") //labels
   .attr("x", legendRectSize + legendSpacing)
   .attr("y", legendRectSize - legendSpacing)
+  .attr('fill', '#5fcd84')
   .text(function (d) {
     return d;
   });

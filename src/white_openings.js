@@ -1,5 +1,5 @@
 // Openings for White best 10
-let openings = d3.csvParse(
+let whiteOpen = d3.csvParse(
   `Rank,Opening,Win%,Draw%,Points per 100 games
 1,Queen's Gambit,40,36,58
 2,Blackmar Diemer Gambit,49,16,57
@@ -43,10 +43,9 @@ let Tip1 = tip
               return `<strong>${d.rank} Rank</strong><br>${d.win}% Win<br>${d.draw}% Draw`
             })
 
-
 chart1.call(Tip1)
 
-let x1 = d3.scaleBand().domain(openings.map(d => d.opening)).rangeRound([0, width1]).padding(0.2)
+let x1 = d3.scaleBand().domain(whiteOpen.map(d => d.opening)).rangeRound([0, width1]).padding(0.2)
 let y1 = d3.scaleLinear().domain([0, 100]).range([height1, 0])
 
 // add axis
@@ -64,11 +63,11 @@ chart1.append("text")
     // .attr("dy", "0.71em")
     .attr('x', 500)
     .attr("text-anchor", "end")
-    .attr('font-size', 40)
-    .text("White best openings");
+    .attr('font-size', 20)
+    .text("White best white openings");
 
 let bar1 = chart1.selectAll('.bar')
-    .data(openings)
+    .data(whiteOpen)
     .enter()
 
 

@@ -1,13 +1,15 @@
 
 .global-window {
-  min-height: 65vh;
+  /* min-height: 65vh; */
+  height: 100vh;
   display: flex;
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-
+  background: #3d3d3d;
+  color: #d3d3d3;
 }
 
 header {
@@ -21,7 +23,7 @@ header {
 svg {
   /* position: absolute; */
   /* left: 7%; */
-  border: 3px solid black;
+  /* border: 3px solid black; */
   object-fit: cover;
   /* top: 10px; */
 }
@@ -36,6 +38,9 @@ rect {
 .side-bar {
   width: 25%;
   border: 1px solid blue;
+  color: #d3d3d3;
+  /* background: #27292B; */
+  background: #06130a;
 }
 
 .side-bar p {
@@ -52,8 +57,11 @@ rect {
   border: 1px solid red;
   position: relative;
   /* height: 900px; */
-  height: 95vh;
-  padding-left: 5px;
+  height: 100vh;
+  /* padding-left: 5px; */
+  /* background: #343434; */
+  /* background: #0b2212; */
+  background-image: radial-gradient(#0b2212, #101010);
 }
 
 .carousel-container {
@@ -62,6 +70,7 @@ rect {
   overflow: hidden;
   position: relative;
   /* top: 0px; */
+
 }
 
 .carousel_track {
@@ -79,7 +88,6 @@ rect {
   bottom: 0;
   height: 100%;
   width: 100%;
-
 }
 
 .carousel-button-left {
@@ -89,8 +97,10 @@ rect {
   transform: translateY(-50%);
   border: 0;
   background: transparent;
+  color: #fff;
   cursor: pointer;
   outline: none;
+  z-index: 1;
 }
 
 .left-arrow {
@@ -104,6 +114,7 @@ rect {
   transform: translateY(-50%);
   border: 0;
   background: transparent;
+  color: #fff;
   cursor: pointer;
   outline: none;
 }
@@ -113,11 +124,11 @@ rect {
 }
 
 .carousel_nav{
-  background: pink;
+  /* background: pink; */
   display: flex;
   justify-content: center;
   padding: 10px 0;
-  /* margin-top: 20px; */
+  margin-top: 45px;
 }
 
 .carousel_indicator {
@@ -125,14 +136,15 @@ rect {
   border-radius: 50%;
   width: 15px;
   height: 15px;
-  background: rgba(0,0,0,.3);
+  background: rgba(0,0,0,0.7);
   margin: 0 12px;
   cursor: pointer;
   outline: none;
 }
 
 .carousel_indicator.current-slide {
-  background: rgba(0,0,0,.75);
+  /* background: rgba(0,0,0,.75); */
+  background: #ccc;
 }
 
 .is-hidden {
@@ -142,59 +154,45 @@ rect {
 
 
 
-/* 
-.white-open{
-  justify-content: center;
-  position: relative;
-  left: 7%;
-}
 
-.white-worst {
-  justify-content: center;
-  position: relative;
-  left: 7%;
-}
-
-
-.black-open {
-  position: relative;
-  justify-content: center;
-  left: 7%;
-}
-
-.donut {
-  width: 80%;
-  height: 450px;
-  justify-content: center;
-  position: relative;
-  left: 7%;
-}
-
-.donut-black {
-  height: 450px;
-  width: 80%;
-  justify-content: center;
-  position: relative;
-  left: 7%;
-} */
-
-.carousel_slide span {
-  margin-left: 7%;
-  margin-right: 7%;
-  text-anchor: middle;
-}
 
 .slide-wrap {
   display: flex;
   flex-direction: column;
   position: relative;
   /* top: 10%; */
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
   height: 100%;
   /* padding-top: 10%; */
 }
 
-.slide-wrap img {
+
+.slide-wrap svg {
+  justify-content: center;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 50px;
+  /* left: 7%;*/;
+  height: 66%;
+  width: 100%;
+  /* border: 3px solid green; */
+  /* background: #40739e; */
+  background-image: radial-gradient(#0f311b, #101010);
+  
+}
+
+.person-wrap {
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
+  /* background: #27292b; */
+  background: #06130a;
+  /* background: #0b2212; */
+  z-index: 1;
+  box-shadow: 3px 3px 5px rgba(255,255,255,0.2);
+}
+
+.person-wrap img {
   width: 250px;
   height: 250px;
   float: left;
@@ -202,29 +200,12 @@ rect {
   object-fit: cover;
 }
 
-.slide-wrap svg {
-  justify-content: center;
-  position: relative;
-  padding-left: 10px;
-  padding-top: 50px;
-  left: 7%;
-  height: 66%;
-  width: 80%;
-}
-
-.person-wrap {
-  display: flex;
-  border: 1px solid black;
-  width: 100%;
-  padding-left: 20px;
-}
-
 .person-wrap span {
   font-size: 18px;
   font-weight: 500;
 }
 
-
+/* 
 .harry-stats {
   justify-content: center;
   position: relative;
@@ -265,3 +246,65 @@ rect {
   width: 80%;
 } 
 
+.white-open{
+  justify-content: center;
+  position: relative;
+  left: 7%;
+}
+
+.white-worst {
+  justify-content: center;
+  position: relative;
+  left: 7%;
+}
+
+
+.black-open {
+  position: relative;
+  justify-content: center;
+  left: 7%;
+}
+
+.donut {
+  width: 80%;
+  height: 450px;
+  justify-content: center;
+  position: relative;
+  left: 7%;
+}*/
+
+/* .donut-black {
+  height: 450px;
+  width: 80%;
+  justify-content: center;
+  position: relative;
+  left: 7%;
+} */
+
+.bar {
+  /* fill: #12b5ff; */
+  /* fill: #046307; */
+  /* fill: #0b2212; */
+  fill: #eeece6;
+}
+
+.bar:hover {
+  transition: .5s;
+  /* fill: #22a6b3; */
+  /* fill: #ff246f; */
+  fill: #5fcd84;
+  /* fill: #057c09; */
+}
+
+.test{
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  top: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.axis .y{
+  fill: #d3d3d3;
+}

@@ -63,6 +63,7 @@ capablanca.append("text")
     .attr('x', 500)
     .attr("text-anchor", "middle")
     .attr('font-size', 20)
+    .attr("fill", "rgb(101, 186, 170)")
     .text("Jose Raul Capablanca Stats");
 
 let barCapa = capablanca.selectAll('.bar')

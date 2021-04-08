@@ -30,17 +30,18 @@ body {
 
 @keyframes animate {
   0% {
-    transform: perspective(1000px) rotateX(0deg) rotate(0deg);
+    transform: perspective(1000px) rotateX(0deg) rotate(25deg);
   }
   100% {
-    transform: perspective(1000px) rotateX(360deg) rotate(0deg);
+    transform: perspective(1000px) rotateX(360deg) rotate(25deg);
   }
 }
 
 .container .box span {
   position: absolute;
-  color: #d3d3d3;
-  font-size: 2.4em;
+  /* color: #d3d3d3; */
+  color: #046307;
+  font-size: 2.4rem;
   white-space: nowrap;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -61,13 +62,13 @@ body {
 
 .container .box span i:nth-child(1) {
   font-style: initial;
-  color: #ff246f;
-  /* color: #212121; */
+  /* color: #ff246f; */
+  color: #d3d3d3;
 }
 
 .container .box span i:nth-child(2) {
   font-style: initial;
-  color: #12b5ff;
-  /* color: #d3d3dd; */
+  /* color: #12b5ff; */
+  color: #046307;
 }
 

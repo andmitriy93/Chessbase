@@ -153,7 +153,8 @@ harry.append("text")
     // .attr("dy", "0.71em")
     .attr('x', 500)
     .attr("text-anchor", "end")
-    .attr('font-size', 40)
+    .attr('font-size', 20)
+    .attr("fill", "rgb(101, 186, 170)")
     .text("Harry Kasparov Stats");
 
 let barHarry = harry.selectAll('.bar')
