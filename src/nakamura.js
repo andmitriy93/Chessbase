@@ -48,7 +48,7 @@ let yNakamura = d3.scaleLinear().domain([0, 3383]).range([heightNakamura, 0])
 
 // add axis
 nakamura.append('g').attr('class', 'axis x')
-    .attr('transform', 'translate(10,' + height + ')')
+  .attr('transform', 'translate(10,' + height + ')')
     .call(d3.axisBottom(xNakamura).ticks(10))
 
 nakamura.append('g').attr('class', 'axis y')
