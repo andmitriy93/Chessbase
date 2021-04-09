@@ -21,7 +21,7 @@
 ### Live demo
 You can check live demo. Click on this link [Live demo](https://andmitriy93.github.io/Chessbase/)
 
-![demo](Screen Shot 2021-04-09 at 4.01.57 AM.png)
+![demo](https://github.com/andmitriy93/Chessbase/blob/main/Screen%20Shot%202021-04-09%20at%204.01.57%20AM.png)
 
 
 ### Features
