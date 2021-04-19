@@ -9,7 +9,7 @@
 * [Status](#setup)
 
 ### General info
- Chessbase is a statistic of the most poular chess players visualized by D3.js library HTML, CSS and Vanilla JavaScript
+ Chessbase is a statistic of the most popular chess players visualized by D3.js library HTML, CSS and Vanilla JavaScript
 
 ### Technologies
  * Vanilla JavaScript
